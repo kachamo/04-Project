@@ -208,14 +208,11 @@ a, .icon:hover{
 h1, p{
     user-select: none;
 }
-.humberger{
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-
-
+.burger{
+    display: none;
 }
 .bar{
+    display: block;
     margin: 2px;
     width: 30px;
     height: 5px;
@@ -226,8 +223,9 @@ h1, p{
     body{
         margin: 0;
         padding: 0;
-        background-position-x: right -100px;
+        background-position-x: right -300px;
         background-position-y: top -200px;
+        background-size:  auto calc(150% - 1vh);
     }
     .nav-bar{
         align-items: flex-start;
@@ -250,11 +248,13 @@ h1, p{
         display: flex;
         flex-direction: column;
     }
-    .humberger{
-        visibility: visible;
+    .burger{
+        display: block;
         cursor: pointer;
     }
-
+    .bar{
+        display: block;
+    }
     .hero {
         width: 300px;
         text-align: center;
@@ -275,7 +275,7 @@ h1, p{
         content: " DESIGN STUDIO";
         font-size: 3rem;
         font-weight: 100;
-        color: var(--color-secondary);
+        color: var(--color-primary);
     }
     .hero p{
         font-size: 2rem;
